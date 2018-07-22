@@ -1,4 +1,4 @@
-# file-parser
+# File Parser
 
 This script can be used for parsing the .txt file, it uses "|" as delimiter (but it can use any other as well) for getting the data from each line.
 
