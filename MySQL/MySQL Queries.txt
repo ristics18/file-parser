@@ -1,0 +1,24 @@
+(1) Write MySQL query to find IPs that mode more than a certain number of requests for a given time period.
+
+SELECT IP FROM log WHERE DateTime BETWEEN ? AND ? GROUP BY IP HAVING COUNT(IP) > ?
+
+Example: SELECT IP FROM log WHERE DateTime BETWEEN "2017-01-01.13:00:00" AND "2017-01-01.14:00:00" GROUP BY IP HAVING COUNT(IP) > 100
+
+
+
+(2) Write MySQL query to find requests made by a given IP.
+
+SELECT Request FROM log WHERE IP = ?
+
+Example: SELECT Request FROM log WHERE IP = "192.168.228.188"
+
+*If we do not want duplicates:
+
+SELECT DISTINCT Request FROM log WHERE IP = "192.168.228.188"
+
+*If we want all the information:
+
+SELECT * FROM log WHERE IP = "192.168.228.188"
+
+
+* Just to clarify
